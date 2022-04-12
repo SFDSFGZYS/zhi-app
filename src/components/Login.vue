@@ -105,6 +105,7 @@ setTimeout(() => {
   box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
 }
 .tips {
+  min-height: 38px;
   color: #627597;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
@@ -112,6 +113,13 @@ setTimeout(() => {
 .cursor {
   color: #fff;
   animation: flesh 0.7s infinite;
+}
+.continue {
+  margin: 20px auto;
+  display: inline-block;
+  color: #fff;
+}
+.icon-direction-right {
 }
 @keyframes zoom {
   0% {
