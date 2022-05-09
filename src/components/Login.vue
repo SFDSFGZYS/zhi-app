@@ -30,7 +30,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const FIRST_LINE_STRING = "Welcome to Zhi’s Blog!";
+const FIRST_LINE_STRING = "Welcome to Zhi’s Area!";
 const SECOND_LINE_STRING = "Enjoy it";
 
 const showCursor = ref(true);
@@ -118,6 +118,7 @@ setTimeout(() => {
   margin: 20px auto;
   display: inline-block;
   color: #fff;
+  cursor: pointer;
 }
 .icon-direction-right {
 }
