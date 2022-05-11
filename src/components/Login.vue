@@ -28,33 +28,33 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const FIRST_LINE_STRING = "Welcome to Zhi’s Area!";
-const SECOND_LINE_STRING = "Enjoy it";
+const FIRST_LINE_STRING = 'Welcome to Zhi’s Area!'
+const SECOND_LINE_STRING = 'Enjoy it'
 
-const showCursor = ref(true);
-const firstLineString = ref("");
-const secondLineString = ref("");
+const showCursor = ref(true)
+const firstLineString = ref('')
+const secondLineString = ref('')
 
 const setTips = () => {
-  let index = 0;
+  let index = 0
   const timer = setInterval(() => {
     if (firstLineString.value === FIRST_LINE_STRING) {
-      secondLineString.value += SECOND_LINE_STRING[index++];
+      secondLineString.value += SECOND_LINE_STRING[index++]
       if (index === SECOND_LINE_STRING.length) {
-        clearInterval(timer);
-        showCursor.value = false;
+        clearInterval(timer)
+        showCursor.value = false
       }
     } else {
-      firstLineString.value += FIRST_LINE_STRING[index++];
-      if (index === FIRST_LINE_STRING.length) index = 0;
+      firstLineString.value += FIRST_LINE_STRING[index++]
+      if (index === FIRST_LINE_STRING.length) index = 0
     }
-  }, 100);
-};
+  }, 100)
+}
 setTimeout(() => {
-  setTips();
-}, 5000);
+  setTips()
+}, 5000)
 </script>
 <style scoped>
 .login {
@@ -73,11 +73,7 @@ setTimeout(() => {
   bottom: 0;
 }
 .login-bg-item {
-  background-image: radial-gradient(
-      2px 2px at 10px 20px,
-      #eee,
-      rgba(0, 0, 0, 0)
-    ),
+  background-image: radial-gradient(2px 2px at 10px 20px, #eee, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 90px 40px, #ddd, rgba(0, 0, 0, 0));
   background-repeat: repeat;
@@ -107,8 +103,7 @@ setTimeout(() => {
 .tips {
   min-height: 38px;
   color: #627597;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 .cursor {
   color: #fff;
