@@ -4,11 +4,15 @@ module.exports = {
     es2021: true,
   },
   extends: ['eslint:recommended', 'plugin:vue/essential', 'plugin:@typescript-eslint/recommended'],
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
   plugins: ['vue', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    eqeqeq: 2,
+    'no-unused-vars': 2,
+  },
 }
