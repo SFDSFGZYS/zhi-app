@@ -5,7 +5,8 @@
 import Login from './components/Login.vue'
 let a = 1
 let b = 2
-let c = { name: 'zhi', age: 18 }
+// let c = { name: 'zhi', age: 18 }
+
 console.log(1111)
 if (a === b) console.log('nice')
 </script>
