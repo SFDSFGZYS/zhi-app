@@ -7,6 +7,7 @@
         :style="{
           animationDelay: 2 * (item - 1) + 's',
         }"
+        :key="item"
       ></div>
     </div>
     <img
@@ -56,31 +57,32 @@ setTimeout(() => {
   setTips()
 }, 5000)
 </script>
-<style scoped>
+<style scoped lang="scss">
 .login {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
-  background-color: #000;
   overflow: hidden;
+  background-color: #000;
 }
+
 .login-bg,
 .login-bg-item {
   position: absolute;
-  left: 0;
   top: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 .login-bg-item {
-  background-image: radial-gradient(2px 2px at 10px 20px, #eee, rgba(0, 0, 0, 0)),
-    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
-    radial-gradient(2px 2px at 90px 40px, #ddd, rgba(0, 0, 0, 0));
-  background-repeat: repeat;
+  background-image: radial-gradient(2px 2px at 10px 20px, #eee, rgb(0 0 0 / 0%)), radial-gradient(2px 2px at 40px 70px, #fff, rgb(0 0 0 / 0%)), radial-gradient(2px 2px at 90px 40px, #ddd, rgb(0 0 0 / 0%));
   background-size: 200px 200px;
+  background-repeat: repeat;
   opacity: 0;
   animation: zoom 15s infinite;
 }
+
 .bg-image {
   position: absolute;
   top: 50%;
@@ -88,48 +90,53 @@ setTimeout(() => {
   width: 200%;
   transform: translate(-50%, -50%);
 }
+
 .login-panel {
+  position: absolute;
+  top: 150px;
+  left: 50%;
   width: 600px;
   padding: 24px;
-  background-color: #0c162d;
   border: 1px solid #202637;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 150px;
   border-radius: 6px;
-  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+  background-color: #0c162d;
+  box-shadow: 0 1px 0 rgb(27 31 36 / 4%);
+  transform: translateX(-50%);
 }
+
 .tips {
   min-height: 38px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   color: #627597;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
+
 .cursor {
   color: #fff;
-  animation: flesh 0.7s infinite;
+  animation: flesh .7s infinite;
 }
+
 .continue {
-  margin: 20px auto;
   display: inline-block;
+  margin: 20px auto;
   color: #fff;
   cursor: pointer;
 }
-.icon-direction-right {
-}
+
 @keyframes zoom {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(.5);
     animation-timing-function: ease-in;
   }
+
   85% {
     opacity: 1;
     transform: scale(1.8);
     animation-timing-function: linear;
   }
+
   100% {
-    opacity: 0.2;
+    opacity: .2;
     transform: scale(2.2);
   }
 }
