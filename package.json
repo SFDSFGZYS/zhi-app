@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": " vite build",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged echo '---检查结束---'",
     "prepare": "husky install",
     "preview": "vite preview"
   },
@@ -21,7 +21,9 @@
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "postcss-html": "^1.4.1",
+    "postcss-scss": "^4.0.4",
     "prettier": "^2.6.2",
+    "sass": "^1.51.0",
     "stylelint": "^14.8.2",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-vue": "^1.4.0",

@@ -64,16 +64,17 @@ setTimeout(() => {
   height: 100%;
   overflow: hidden;
   background-color: #000;
+
+  .login-bg,
+  .login-bg-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
-.login-bg,
-.login-bg-item {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 
 .login-bg-item {
   background-image: radial-gradient(2px 2px at 10px 20px, #eee, rgb(0 0 0 / 0%)), radial-gradient(2px 2px at 40px 70px, #fff, rgb(0 0 0 / 0%)), radial-gradient(2px 2px at 90px 40px, #ddd, rgb(0 0 0 / 0%));

@@ -1,9 +1,12 @@
 module.exports = {
   extends: [
     'stylelint-config-standard',
+    'stylelint-config-standard-scss',
     'stylelint-config-recommended-vue',
+    'stylelint-config-recommended-vue/scss',
     'stylelint-config-prettier',
   ],
+  customSyntax: 'postcss-html',
   plugins: ['stylelint-order'],
   rules: {
     'no-empty-source': null,
@@ -25,6 +28,7 @@ module.exports = {
     indentation: 2,
     'no-eol-whitespace': true,
     'string-no-newline': null,
+    'no-descending-specificity': null,
     'order/order': ['declarations', 'custom-properties', 'dollar-variables', 'rules', 'at-rules'],
     'order/properties-order': [
       'position',
